@@ -1,0 +1,207 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Button styles */
+.btn {
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  border: none;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.btn:focus {
+  outline: 4px solid rgba(0, 123, 255, 0.5);
+}
+
+/* Modal styles */
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.dialog-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  margin: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Card styles */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px 0;
+}
+
+.card-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.card-content {
+  font-size: 1em;
+}
+
+/* Loader styles */
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #333; /* Dark background */
+  padding: 1rem; /* Padding for navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.navbar-list {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  display: flex; /* Flexbox for horizontal layout */
+  gap: 1rem; /* Space between items */
+}
+
+.navbar-item {
+  margin: 0; /* Reset margin */
+}
+
+.navbar-link {
+  color: #fff; /* White text color */
+  text-decoration: none; /* Remove underline */
+  padding: 0.5rem 1rem; /* Padding for links */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.navbar-link:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+}
+
+/* List styles for BillData component */
+.bill-data-list {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  border: 1px solid #e0e0e0; /* Light border for the list */
+  border-radius: 8px; /* Rounded corners */
+  background: #fff; /* White background for the list */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.bill-data-list-item {
+  padding: 15px; /* Padding for each list item */
+  border-bottom: 1px solid #e0e0e0; /* Divider between items */
+}
+
+.bill-data-list-item:last-child {
+  border-bottom: none; /* Remove border for the last item */
+}
+
+.bill-data-list-item:hover {
+  background-color: rgba(0, 123, 255, 0.1); /* Light blue background on hover */
+}
+
+/* Markdown List Page styles */
+.markdown-list {
+  padding: 20px; /* Padding around the list */
+  background: #f9f9f9; /* Light background for contrast */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.markdown-list h1 {
+  font-size: 2rem; /* Larger title font */
+  margin-bottom: 20px; /* Space below the title */
+}
+
+.markdown-list ul {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove padding */
+}
+
+.markdown-list ul li {
+  padding: 15px; /* Padding for each list item */
+  background: #ffffff; /* White background for items */
+  border: 1px solid #e0e0e0; /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  margin-bottom: 10px; /* Space between items */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.markdown-list ul li:hover {
+  background-color: rgba(0, 123, 255, 0.1); /* Light blue background on hover */
+}
+
+.markdown-list button {
+  padding: 10px 15px; /* Button padding */
+  background-color: #007bff; /* Primary button color */
+  color: white; /* Button text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.markdown-list button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.floatRight {
+  position: relative;
+  float: right;
+}
+
+.mt-2.5 {
+  margin-top: 0.625rem;
+}
+
+.pointer {
+  cursor: pointer !important;
+}
