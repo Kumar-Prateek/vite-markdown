@@ -1,11 +1,11 @@
 # Employee Commitment Report (Manager Portal)
 
 ### **Summary**
-A new component needs to be developed in the Manager Portal to view the commitments made by employees under their manager. The report will be nested, initially displaying the data for employees directly under the manager. Upon clicking on an employee, their direct reports (if any) will be displayed, continuing recursively until the root-level employee is reached. This drill-down report will be dynamic and fetched from an API, with optional date and name filters.
+A new component needs to be developed in the Manager Portal to view the commitments made by employees under their manager. The report will be nested, initially displaying the data for employees directly under the manager. Upon clicking on an employee, their direct reportees (if any) will be displayed, continuing recursively until the root-level employee is reached. This drill-down report will be dynamic and fetched from an API, with optional date and name filters.
 
 ### **Features**
 - **Initial Manager View**: Displays a list of employees directly reporting to the manager.
-- **Employee Drill-Down**: Clicking on an employee expands their direct reports, displaying their commitments. This behavior will continue until the root-level employee.
+- **Employee Drill-Down**: Clicking on an employee expands their direct reports, displaying their commitments and other related metrics. This behavior will continue until the root-level employee.
 - **Filters**:
   - **Date Filter**: An optional filter for selecting a specific date range for the commitments.
   - **Name Filter**: A non-mandatory filter for searching specific employees by name.
@@ -15,7 +15,6 @@ A new component needs to be developed in the Manager Portal to view the commitme
 
 ### **API Integration**
 - The component will make API requests to fetch the commitment data based on the selected filters.
-  - Example API endpoint: `GET /api/commitments?managerId=<managerId>&startDate=<startDate>&endDate=<endDate>&employeeName=<employeeName>`
 - The API response will contain a nested structure, where each employee has their commitments and direct reports.
 
 ### **State Management**
@@ -45,4 +44,16 @@ A new component needs to be developed in the Manager Portal to view the commitme
 5. The component provides loading indicators while fetching data.
 6. The component handles errors and displays appropriate messages if data is unavailable or if an API call fails.
 
-### **Priority**: High
+
+### **UI/UX:**
+-Responsive and user-friendly design adapts to dynamic content.
+-Use an expandable/collapsible tree or accordion-style layout for the drill-down navigation.
+-Provide loading indicators while fetching data.
+-Display appropriate error messages when no data is available or API calls fail.
+
+### **Technical Notes:**
+-Implement a reusable employee card component:
+-Render fields (e.g., labels, commitments, and metrics) dynamically based on API response.
+-Include validation logic for input fields where applicable (e.g., date ranges or employee names).
+-Use a reusable date filter component for applying date filters dynamically.
+-Cache fetched data at each hierarchy level to minimize API calls and improve performance.
